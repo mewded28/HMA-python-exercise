@@ -1,0 +1,25 @@
+income = float(input("Enter your income: "))
+
+def calculate_tax(income):
+    if income <= 2000:
+        tax_rate = 0
+    elif income <= 4000:
+        tax_rate = 0.15
+    elif income <= 7000:
+        tax_rate = 0.20
+    elif income <= 10000:
+        tax_rate = 0.25
+    elif income <= 14000:
+        tax_rate = 0.30
+    else:
+        tax_rate = 0.35
+
+    tax = income * tax_rate
+    net_income = income - tax
+
+    print(f"Income: ${income}")
+    print(f"Tax Rate: {tax_rate * 100}%")
+    print(f"Tax Owed: ${tax}")
+    print(f"Net Income: ${net_income}")
+
+calculate_tax(income)
